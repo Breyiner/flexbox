@@ -1,0 +1,16 @@
+.contenedorPadre {
+  max-width: 600px;
+  height: 600px;
+  margin: 0 auto;
+  background-color: aqua;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.itemHijo {
+  width: 50px;
+  height: 50px;
+  background-color: antiquewhite;
+}
