@@ -1,10 +1,10 @@
 .encabezado {
     width: 100%;
     /* height: 55px; */
-    background-color: #111;
+    background-image: url(../imagenes/fondo-header.webp);
     display: flex;
     align-items: center;
-    flex-flow: row wrap;
+    flex-wrap: wrap;
     padding: 0 30px;
     border-bottom: 1px solid #676767;
 }
@@ -16,12 +16,11 @@
 }
 
 .encabezado__menu {
-    display: flex;
-    text-align: center;
-    list-style: none;
+    margin-right: 5%;
 }
 
 .encabezado__opciones {
+    display: inline-block;
     color: #fff;
     line-height: 55px;
     height: 55px;
@@ -38,8 +37,12 @@
     background-color: #fff;
     border-radius: 55%;
     padding: 5px;
-    margin-left: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
     cursor: pointer;
+    right: 30px;
 }
 
 .encabezado__opciones:hover {
