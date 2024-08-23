@@ -1,5 +1,6 @@
 @import url(style_ejercicios/style_ejercicio.css);
 @import url(style_ejercicios/style_ejercicio2.css);
+@import url(style_ejercicios/style_ejercicio3.css);
 
 * {
   margin: 0;
@@ -11,7 +12,7 @@
   max-width: 1200px;
   height: 100vh;
   margin: 0 auto;
-  background-color: #000;
+  background-color: #000000;
 
   display: flex;
   /* display: inline-flex; */
@@ -20,10 +21,10 @@
   /* flex-direction: column; */
   /* flex-direction: column-reverse; */
   /* flex-wrap: nowrap; */
-  /* flex-wrap: wrap; */
+  flex-wrap: wrap;
   /* flex-flow: column wrap; */
 
-  justify-content: start;
+  justify-content: flex-start;
   /* justify-content: flex-end;
   justify-content: center;
   justify-content: space-between;
@@ -35,17 +36,40 @@
   align-items: center;
   align-items: baseline; */
   align-items: stretch;
+
+  align-content: flex-start;
+  /* align-content: flex-end;
+  align-content: center;
+  align-content: space-between;
+  align-content: space-around; */
 }
 
 .cuadrado {
   width: 200px;
   height: 200px;
   background-color: azure;
-  border: 0.1px solid;
+  border: 1px solid #000;
   text-align: center;
 }
 
 .cuadrado:hover {
   background-color: bisque;
   transition: 0.5s;
+}
+
+.contenedor .cuadrado:nth-child(3) {
+  background-color: steelblue;
+  order: -1;
+}
+
+@media (max-width: 800px) {
+  .contenedor {
+    background-color: #222;
+    flex-direction: column;
+  }
+
+  .contenedor .cuadrado:nth-child(3) {
+  background-color: steelblue;
+  order: 1;
+}
 }
